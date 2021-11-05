@@ -252,8 +252,7 @@ def create_pipeline(
     # Upload custom trained model to Vertex AI.
     labels = {
         "dataset_name": config.DATASET_DISPLAY_NAME,
-        "pipeline_name": config.PIPELINE_NAME,
-        "pipeline_root": pipeline_root
+        "pipeline_name": config.PIPELINE_NAME
     }
     labels = json.dumps(labels)
     explanation_config = json.dumps(features.generate_explanation_config())
